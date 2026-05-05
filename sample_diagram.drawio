@@ -1,0 +1,37 @@
+{
+  "title": "Signal flow test — ATEM PGM to LED wall via routing",
+  "page_width": 1700,
+  "page_height": 1100,
+  "devices": [
+    {
+      "id": "atem",
+      "library": "blackmagic",
+      "title": "atem 2/me"
+    },
+    {
+      "id": "vh",
+      "library": "blackmagic",
+      "title": "videohub 20"
+    },
+    {
+      "id": "sx40",
+      "library": "brompton",
+      "title": "tessera SX40"
+    },
+    {
+      "id": "mctrl",
+      "library": "novastar",
+      "title": "mx40 pro"
+    }
+  ],
+  "connections": [
+    { "from": "atem.PGM ME1", "to": "vh.SDI 1", "cable": "sdi", "label": "PGM" },
+    { "from": "atem.PGM ME2", "to": "vh.SDI 2", "cable": "sdi", "label": "PGM2" },
+    { "from": "vh.SDI 1", "to": "sx40.SDI 1 (12G)", "cable": "sdi", "label": "to wall A" },
+    { "from": "vh.SDI 2", "to": "mctrl.SDI 1 (12G)", "cable": "sdi", "label": "to wall B" },
+    { "from": "atem.Ref In", "to": "sx40.Genlock In", "cable": "genlock" },
+    { "from": "atem.Ethernet RJ45", "to": "sx40.Network", "cable": "network", "label": "control" }
+  ],
+  "title_block": true,
+  "legend": true
+}
