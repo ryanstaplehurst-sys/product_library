@@ -6,10 +6,17 @@ Run: python3 sources/novastar.py
 Devices:
     - MCTRL4K       — workhorse 4K controller
     - MCTRL R5      — newer all-in-one controller
+    - MCTRL660      — legacy 1080p controller
     - MX40 Pro      — popular all-in-one 4K
+    - MX30          — mid-range all-in-one
+    - MX20          — entry all-in-one
     - MX2000 Pro    — flagship 8K all-in-one (COEX)
     - H Series (H9) — modular video wall processor
     - NovaPro UHD Jr — legacy 4K
+    - VX1000        — all-in-one with screen mgmt
+    - VX6S          — compact all-in-one
+    - VX4U          — 4K all-in-one
+    - VX4           — basic 4K all-in-one
     - CVT 10        — fibre/cat6 distribution
 """
 
@@ -214,6 +221,189 @@ DEVICES = [
         "outputs": [
             "DATA Out",
             "Fibre Out",
+        ],
+    },
+    {
+        "title": "mctrl660",
+        "name": "Novastar MCTRL660",
+        "subtitle": "1080p Controller",
+        "tags": ["LED", "Processor"],
+        "width": 160,
+        "loose_ports": ["IP:"],
+        "inputs": [
+            "HDMI 1.3",
+            "DVI",
+            "DP 1.1",
+            "SDI Loop In",
+        ],
+        "outputs": [
+            "DATA 1",
+            "DATA 2",
+            "DVI Loop",
+        ],
+        "control": [
+            "Network",
+            "USB",
+        ],
+    },
+    {
+        "title": "MX20",
+        "name": "Novastar MX20",
+        "subtitle": "Entry All-in-one",
+        "tags": ["LED", "Processor"],
+        "width": 160,
+        "loose_ports": ["IP:", "Genlock"],
+        "inputs": [
+            "HDMI 2.0",
+            "DP 1.2",
+            "SDI (12G)",
+        ],
+        "outputs": [
+            "DATA 1",
+            "DATA 2",
+            "DATA 3",
+            "DATA 4",
+        ],
+        "control": [
+            "Network",
+            "USB",
+            "Audio",
+        ],
+    },
+    {
+        "title": "MX30",
+        "name": "Novastar MX30",
+        "subtitle": "Mid-range All-in-one",
+        "tags": ["LED", "Processor"],
+        "width": 160,
+        "loose_ports": ["IP:", "Genlock In", "Genlock Loop"],
+        "inputs": [
+            "HDMI 2.0 1",
+            "HDMI 2.0 2",
+            "DP 1.2",
+            "SDI (12G)",
+        ],
+        "outputs": [
+            "DATA 1",
+            "DATA 2",
+            "DATA 3",
+            "DATA 4",
+            "DATA 5",
+            "DATA 6",
+        ],
+        "control": [
+            "Network 1",
+            "Network 2",
+            "USB",
+            "Audio",
+        ],
+    },
+    {
+        "title": "VX1000",
+        "name": "Novastar VX1000",
+        "subtitle": "All-in-one + Screen Mgmt",
+        "tags": ["LED", "Processor"],
+        "width": 160,
+        "loose_ports": ["IP:", "Genlock In", "Genlock Loop"],
+        "inputs": [
+            "HDMI 2.0 1",
+            "HDMI 2.0 2",
+            "DP 1.2",
+            "DVI",
+            "SDI (3G)",
+            "VGA",
+            "CVBS",
+        ],
+        "outputs": [
+            "DATA 1",
+            "DATA 2",
+            "DATA 3",
+            "DATA 4",
+            "DATA 5",
+            "DATA 6",
+            "HDMI Mon",
+        ],
+        "control": [
+            "Network",
+            "USB",
+            "Audio",
+        ],
+    },
+    {
+        "title": "VX6S",
+        "name": "Novastar VX6S",
+        "subtitle": "Compact All-in-one",
+        "tags": ["LED", "Processor"],
+        "width": 160,
+        "loose_ports": ["IP:"],
+        "inputs": [
+            "HDMI 1.3",
+            "DVI",
+            "DP 1.1",
+            "VGA",
+            "CVBS",
+        ],
+        "outputs": [
+            "DATA 1",
+            "DATA 2",
+            "DATA 3",
+            "DATA 4",
+            "DATA 5",
+            "DATA 6",
+            "HDMI Mon",
+        ],
+        "control": [
+            "Network",
+            "USB",
+            "Audio",
+        ],
+    },
+    {
+        "title": "VX4U",
+        "name": "Novastar VX4U",
+        "subtitle": "4K All-in-one",
+        "tags": ["LED", "Processor"],
+        "width": 160,
+        "loose_ports": ["IP:", "Genlock"],
+        "inputs": [
+            "HDMI 2.0 1",
+            "HDMI 2.0 2",
+            "DP 1.2",
+            "SDI (12G)",
+        ],
+        "outputs": [
+            "DATA 1",
+            "DATA 2",
+            "DATA 3",
+            "DATA 4",
+            "HDMI Mon",
+        ],
+        "control": [
+            "Network",
+            "USB",
+        ],
+    },
+    {
+        "title": "VX4",
+        "name": "Novastar VX4",
+        "subtitle": "4K All-in-one (basic)",
+        "tags": ["LED", "Processor"],
+        "width": 160,
+        "loose_ports": ["IP:"],
+        "inputs": [
+            "HDMI 2.0",
+            "DP 1.2",
+            "DVI",
+        ],
+        "outputs": [
+            "DATA 1",
+            "DATA 2",
+            "DATA 3",
+            "DATA 4",
+        ],
+        "control": [
+            "Network",
+            "USB",
         ],
     },
 ]
