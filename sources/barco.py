@@ -116,6 +116,59 @@ DEVICES = [
             "USB",
         ],
     },
+    {
+        "title": "E2 Jr",
+        "name": "Barco E2 Jr 4K",
+        "subtitle": "Screen Management System",
+        "tags": ["Video", "Switcher"],
+        "width": 190,
+        "loose_ports": ["IP:"],
+        "inputs": [
+            "Input 1-8 (SDI/HDMI/DP)",
+        ],
+        "outputs": [
+            "Output 1-4",
+            "Multiview 1-2",
+        ],
+        "control": ["Network 1", "Network 2", "Console (EC)"],
+    },
+    {
+        "title": "EC-30",
+        "name": "Barco EC-30",
+        "subtitle": "Event Controller",
+        "tags": ["Video", "Control"],
+        "width": 170,
+        "loose_ports": ["IP:"],
+        "control": ["Network", "USB"],
+    },
+    {
+        "title": "EC-50",
+        "name": "Barco EC-50",
+        "subtitle": "Event Controller",
+        "tags": ["Video", "Control"],
+        "width": 170,
+        "loose_ports": ["IP:"],
+        "outputs": ["DP Monitor 1", "DP Monitor 2"],
+        "control": ["Network", "USB"],
+    },
+    {
+        "title": "PDS902",
+        "name": "Barco PDS902",
+        "subtitle": "Seamless Presentation Switcher",
+        "tags": ["Video", "Switcher"],
+        "width": 180,
+        "loose_ports": ["IP:"],
+        "inputs": [
+            "HDMI 1-8",
+            "DP 9",
+        ],
+        "outputs": [
+            "Program Out 1 (HDMI)",
+            "Program Out 2 (HDMI)",
+            "Multiview (HDMI)",
+        ],
+        "control": ["Network", "RS-232"],
+    },
 ]
 
 

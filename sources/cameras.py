@@ -108,6 +108,23 @@ DEVICES = [
             "USB",
         ],
     },
+    {
+        "title": "Osmo Pocket 3",
+        "name": "DJI Osmo Pocket 3",
+        "subtitle": "4K Gimbal Camera",
+        "tags": ["Video", "Camera"],
+        "width": 160,
+        "loose_ports": ["WiFi / BT"],
+        "outputs": ["USB-C Out"],
+    },
+    {
+        "title": "Spedal Webcam",
+        "name": "Spedal Stream Webcam",
+        "subtitle": "USB Webcam",
+        "tags": ["Video", "Camera"],
+        "width": 160,
+        "outputs": ["USB Out"],
+    },
 ]
 
 

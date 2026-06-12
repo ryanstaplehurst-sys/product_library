@@ -175,6 +175,57 @@ DEVICES = [
             "USB",
         ],
     },
+    {
+        "title": "QU16",
+        "name": "Allen & Heath QU16",
+        "subtitle": "16-ch Digital Console",
+        "tags": ["Audio", "Console"],
+        "width": 170,
+        "loose_ports": ["IP:"],
+        "inputs": [
+            "Mic/Line 1-16",
+            "ST 1-3 (TRS)",
+        ],
+        "outputs": [
+            "Main LR (XLR)",
+            "Mix 1-4 (XLR)",
+            "Mix 5-10 (TRS)",
+            "AES Out",
+            "Alt Out",
+        ],
+        "control": ["dSNAKE", "Network", "USB-B"],
+    },
+    {
+        "title": "Zed 14",
+        "name": "Allen & Heath Zed 14",
+        "subtitle": "Analogue Mixer",
+        "tags": ["Audio", "Console"],
+        "width": 170,
+        "inputs": [
+            "Mic/Line 1-6",
+            "ST 7/8 - 13/14",
+        ],
+        "outputs": [
+            "Main L/R (XLR)",
+            "Aux 1-2",
+            "Monitor Out",
+        ],
+        "control": ["USB"],
+    },
+    {
+        "title": "AB168",
+        "name": "Allen & Heath AB168",
+        "subtitle": "16/8 Stagebox",
+        "tags": ["Audio", "Stagebox"],
+        "width": 170,
+        "inputs": [
+            "Mic/Line 1-16",
+        ],
+        "outputs": [
+            "Line Out 1-8",
+        ],
+        "control": ["dSNAKE", "dSNAKE Expander"],
+    },
 ]
 
 

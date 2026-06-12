@@ -138,6 +138,73 @@ DEVICES = [
             "AP Drop 2",
         ],
     },
+    {
+        "title": "Netgear M4250",
+        "name": "Netgear M4250 (AV Line)",
+        "subtitle": "12-Port AV/Dante Switch",
+        "tags": ["Network", "Switch"],
+        "width": 170,
+        "loose_ports": ["IP:"],
+        "inputs": [
+            "Ports 1-12 (PoE+)",
+            "SFP 1-2",
+        ],
+        "control": ["OOB Mgmt"],
+    },
+    {
+        "title": "HP Baseline",
+        "name": "HP Baseline Switch",
+        "subtitle": "Gigabit Switch",
+        "tags": ["Network", "Switch"],
+        "width": 160,
+        "loose_ports": ["IP:"],
+        "inputs": ["Ports 1-24"],
+    },
+    {
+        "title": "3com 2816",
+        "name": "3com Baseline 2816-SFP",
+        "subtitle": "16-Port Gigabit Switch",
+        "tags": ["Network", "Switch"],
+        "width": 160,
+        "loose_ports": ["IP:"],
+        "inputs": [
+            "Ports 1-16",
+            "SFP 1-2",
+        ],
+    },
+    {
+        "title": "DrayTek AP 960C",
+        "name": "DrayTek VigorAP 960C",
+        "subtitle": "WiFi 6 Access Point",
+        "tags": ["Network", "WiFi"],
+        "width": 160,
+        "loose_ports": ["IP:", "WiFi 2.4/5GHz"],
+        "inputs": ["LAN (PoE)"],
+    },
+    {
+        "title": "Cisco SG300-20",
+        "name": "Cisco SG300-20",
+        "subtitle": "20-Port Managed Switch",
+        "tags": ["Network", "Switch"],
+        "width": 160,
+        "loose_ports": ["IP:"],
+        "inputs": [
+            "Ports 1-16",
+            "Combo 17-20 (SFP)",
+        ],
+    },
+    {
+        "title": "MikroTik RB4011",
+        "name": "MikroTik RB4011iGS+",
+        "subtitle": "Production Router",
+        "tags": ["Network", "Router"],
+        "width": 160,
+        "loose_ports": ["IP:"],
+        "inputs": [
+            "Eth 1-10",
+            "SFP+",
+        ],
+    },
 ]
 
 

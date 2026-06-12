@@ -55,6 +55,15 @@ DEVICES = [
             "IR (line-of-sight)",
         ],
     },
+    {
+        "title": "Beetronics 22",
+        "name": "22\" Beetronics Touchscreen",
+        "subtitle": "Touch Monitor",
+        "tags": ["Display", "Touch"],
+        "width": 170,
+        "inputs": ["HDMI In", "VGA In"],
+        "control": ["USB Touch"],
+    },
 ]
 
 

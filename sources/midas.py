@@ -49,6 +49,25 @@ DEVICES = [
             "Network",
         ],
     },
+    {
+        "title": "M32",
+        "name": "Midas M32",
+        "subtitle": "40-ch Digital Console",
+        "tags": ["Audio", "Console"],
+        "width": 180,
+        "loose_ports": ["IP:"],
+        "inputs": [
+            "Mic/Line 1-32",
+            "Aux In 1-6 (TRS)",
+            "Talkback In",
+        ],
+        "outputs": [
+            "XLR Out 1-16",
+            "Monitor Out L/R",
+            "AES/EBU Out",
+        ],
+        "control": ["AES50 A", "AES50 B", "Card Slot", "Network", "MIDI"],
+    },
 ]
 
 

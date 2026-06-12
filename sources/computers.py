@@ -140,6 +140,82 @@ DEVICES = [
             "Bluetooth",
         ],
     },
+    {
+        "title": "Asus NUC13 i7",
+        "name": "Asus NUC13 Pro i7",
+        "subtitle": "Mini PC",
+        "tags": ["Computer"],
+        "width": 170,
+        "loose_ports": ["IP:"],
+        "outputs": [
+            "HDMI 1",
+            "HDMI 2",
+            "Thunderbolt 4 x2",
+        ],
+        "control": ["LAN (2.5G)", "USB-A"],
+    },
+    {
+        "title": "ASUS TUF A15",
+        "name": "ASUS TUF Gaming A15",
+        "subtitle": "Laptop",
+        "tags": ["Computer"],
+        "width": 170,
+        "loose_ports": ["IP:"],
+        "outputs": [
+            "HDMI Out",
+            "USB-C (DP)",
+        ],
+        "control": ["LAN", "USB-A"],
+    },
+    {
+        "title": "Mac Mini",
+        "name": "Apple Mac Mini",
+        "subtitle": "Desktop",
+        "tags": ["Computer"],
+        "width": 170,
+        "loose_ports": ["IP:"],
+        "outputs": [
+            "HDMI Out",
+            "Thunderbolt x2",
+        ],
+        "control": ["LAN", "USB-A"],
+    },
+    {
+        "title": "iMac",
+        "name": "Apple iMac",
+        "subtitle": "All-in-One Desktop",
+        "tags": ["Computer"],
+        "width": 170,
+        "loose_ports": ["IP:", "WiFi"],
+        "outputs": [
+            "Thunderbolt x2",
+        ],
+        "control": ["LAN"],
+    },
+    {
+        "title": "Dell 9030 AIO",
+        "name": "Dell 9030 All-In-One",
+        "subtitle": "All-in-One Desktop",
+        "tags": ["Computer"],
+        "width": 170,
+        "loose_ports": ["IP:"],
+        "outputs": [
+            "DP Out",
+        ],
+        "control": ["LAN", "USB-A"],
+    },
+    {
+        "title": "Surface Pro",
+        "name": "Microsoft Surface Pro",
+        "subtitle": "Tablet PC",
+        "tags": ["Computer"],
+        "width": 170,
+        "loose_ports": ["WiFi"],
+        "outputs": [
+            "USB-C (DP)",
+        ],
+        "control": ["USB-A"],
+    },
 ]
 
 

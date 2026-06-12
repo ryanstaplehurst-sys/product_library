@@ -329,6 +329,31 @@ DEVICES = [
             "Aux (3.5mm)",
         ],
     },
+    {
+        "title": "Mio Mix 104",
+        "name": "Mio Mix 104",
+        "subtitle": "Analogue Mixer",
+        "tags": ["Audio", "Console"],
+        "width": 160,
+        "inputs": [
+            "Mic 1-2 (XLR)",
+            "Line 3/4 (TRS)",
+        ],
+        "outputs": [
+            "Main L/R",
+            "Phones Out",
+        ],
+        "control": ["USB"],
+    },
+    {
+        "title": "Fischer IEM BP",
+        "name": "Fischer Amps In-Ear Monitor BP",
+        "subtitle": "Wired IEM Beltpack",
+        "tags": ["Audio", "Monitoring"],
+        "width": 170,
+        "inputs": ["Line In L/R (XLR)"],
+        "outputs": ["Phones Out", "Link Thru"],
+    },
 ]
 
 

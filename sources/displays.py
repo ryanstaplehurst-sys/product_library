@@ -102,6 +102,14 @@ DEVICES = [
     basic_monitor("IIYAMA", "24"),
     basic_monitor("IIYAMA", "28", name="IIYAMA Prolite 28\""),
     basic_monitor("Lenovo", "27"),
+    {
+        "title": "Philips 27",
+        "name": "Philips 27\" Monitor",
+        "subtitle": "Desktop Monitor",
+        "tags": ["Display"],
+        "width": 160,
+        "inputs": ["HDMI In", "VGA In"],
+    },
 ]
 
 

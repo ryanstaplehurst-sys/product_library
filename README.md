@@ -2,7 +2,7 @@
 
 A curated set of draw.io shape libraries for the AV equipment Insert Productions actually rents, plus a Python toolkit that lets Claude compose `.drawio` signal-flow diagrams from free-form briefs.
 
-**27 libraries · ~218 device shapes · Insert's full April 2026 rental list covered.**
+**29 libraries · ~314 device shapes · synced to the live Current RMS catalogue, June 2026.**
 
 See [`coverage_status.md`](coverage_status.md) for the up-to-date inventory.
 
@@ -23,7 +23,7 @@ The short version:
 
 1. Click the green **Code** button at the top of this repo → **Download ZIP**. Extract somewhere sensible.
 2. Open draw.io (desktop or app.diagrams.net).
-3. **File → Open Library from File…** → navigate into the `libraries/` folder → select all 27 `.xml` files (Cmd+A or Ctrl+A) → Open.
+3. **File → Open Library from File…** → navigate into the `libraries/` folder → select all 29 `.xml` files (Cmd+A or Ctrl+A) → Open.
 4. Libraries appear in the left panel. Drag any device onto the canvas.
 
 `_cables.xml` contains pre-styled edge templates you can drop between ports for the cable convention.
@@ -113,35 +113,7 @@ python3 scripts/build_all.py
 
 ## Library coverage
 
-| File | Devices | Notes |
-|---|---|---|
-| `_cables.xml` | 18 | Cable convention edge templates |
-| `blackmagic.xml` | 25 | Community-sourced |
-| `brompton.xml` | 5 | Tessera SX40, S8, M2, T1, XD |
-| `novastar.xml` | 14 | MCTRL/MX/VX/H series + CVT |
-| `yamaha.xml` | 4 | QL1, DM3, DXR12, MSP3 |
-| `allen-heath.xml` | 4 | SQ5, CQ-12T, DX168, Zedi 10 |
-| `sennheiser.xml` | 12 | EW-DX, EW-D, EM 300-500 G4, beltpacks/handhelds, IEM, MAT 153-S |
-| `shure.xml` | 2 | MX412, SM58 |
-| `midas.xml` | 1 | DL32 stagebox |
-| `aja.xml` | 2 | 1×6 SDI DA, C10DA |
-| `decimator.xml` | 2 | MD-HX, MD-Cross v3 |
-| `kramer.xml` | 2 | VM-4H2 1:2, 1:4 |
-| `barco.xml` | 3 | E2 4K, S3 4K Gen 2, PDS 4K |
-| `dnb.xml` | 10 | D12/D20/D40/D80 amps + E8/M4/T10/V-Sub/Y10P/Y7P |
-| `audio-other.xml` | 16 | QSC, BSS, Behringer, Tascam, Sonifex, Sonos, Bose, LD, Lynx, RED, Pioneer DM-40D |
-| `mics.xml` | 5 | DPA, Rode, generic lapel/BT lapel |
-| `dj-kit.xml` | 3 | CDJ-3000, DJM-A9, DJ Kit bundle |
-| `network.xml` | 21 | DrayTek, Netgear, TP-Link, Ubiquiti |
-| `displays.xml` | 22 | Samsung TVs (24-98"), HP, IIYAMA, Lenovo |
-| `touchscreens.xml` | 9 | IIYAMA Prolite touch (15-75") |
-| `led-panels.xml` | 11 | Absen, Aluvision, BeMatrix, LedSkin, Unilumin, generic 3.9mm |
-| `cameras.xml` | 5 | Canon, Lumix, Sony, Logitech, BirdDog |
-| `playback.xml` | 8 | BrightSign, Apple TV, Pro Signal, Sprite, Mac Studio, vMix/Pixera workstation |
-| `comms.xml` | 13 | GreenGo, Motorola, EarTech, Interspace cueing |
-| `extenders.xml` | 6 | LINDY, Neoteck, generic HDMI 3:1, Pro Signal 4×4, Datapath FX4/H |
-| `elgato.xml` | 3 | Streamdeck Mini, XL, HD60 Pro |
-| `computers.xml` | 13 | MacBook variants, Lenovo Legion, MSI, Intel NUC |
+See [`coverage_status.md`](coverage_status.md) for the full per-library device table — it's the single source of truth, updated on every stock sync (last: June 2026, which added `projectors.xml` and `roland.xml` and ~75 shapes).
 
 ## Out of scope
 

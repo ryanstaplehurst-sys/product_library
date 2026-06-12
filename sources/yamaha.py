@@ -138,6 +138,112 @@ DEVICES = [
             "Input 2 (RCA)",
         ],
     },
+    {
+        "title": "CL5",
+        "name": "Yamaha CL5",
+        "subtitle": "72-ch Digital Console",
+        "tags": ["Audio", "Console"],
+        "width": 180,
+        "loose_ports": ["IP:"],
+        "inputs": [
+            "Omni In 1-8",
+            "Dante In (64ch)",
+            "AES/EBU In",
+            "Word Clock In",
+        ],
+        "outputs": [
+            "Omni Out 1-8",
+            "Dante Out (64ch)",
+            "AES/EBU Out",
+        ],
+        "control": ["Dante Primary", "Dante Secondary", "Network", "MIDI / GPI"],
+    },
+    {
+        "title": "QL5",
+        "name": "Yamaha QL5",
+        "subtitle": "64-ch Digital Console",
+        "tags": ["Audio", "Console"],
+        "width": 180,
+        "loose_ports": ["IP:"],
+        "inputs": [
+            "Omni In 1-16",
+            "Dante In (64ch)",
+            "AES/EBU In",
+            "Word Clock In",
+        ],
+        "outputs": [
+            "Omni Out 1-16",
+            "Dante Out (64ch)",
+        ],
+        "control": ["Dante Primary", "Dante Secondary", "Network", "MIDI / GPI"],
+    },
+    {
+        "title": "LS9-32",
+        "name": "Yamaha LS9-32",
+        "subtitle": "32-ch Digital Console",
+        "tags": ["Audio", "Console"],
+        "width": 180,
+        "loose_ports": ["IP:"],
+        "inputs": [
+            "Omni In 1-32",
+            "2TR In",
+            "Word Clock In",
+        ],
+        "outputs": [
+            "Omni Out 1-16",
+            "2TR Out",
+        ],
+        "control": ["MY Slot 1", "MY Slot 2", "Network", "MIDI"],
+    },
+    {
+        "title": "M7CL",
+        "name": "Yamaha M7CL",
+        "subtitle": "32/48-ch Digital Console",
+        "tags": ["Audio", "Console"],
+        "width": 180,
+        "loose_ports": ["IP:"],
+        "inputs": [
+            "Omni In 1-32 (48)",
+            "2TR In",
+            "Word Clock In",
+        ],
+        "outputs": [
+            "Omni Out 1-16",
+            "2TR Out",
+        ],
+        "control": ["MY Slot 1", "MY Slot 2", "MY Slot 3", "Network", "MIDI"],
+    },
+    {
+        "title": "RIO1608-D",
+        "name": "Yamaha RIO1608-D",
+        "subtitle": "Dante Stagebox 16/8",
+        "tags": ["Audio", "Stagebox"],
+        "width": 170,
+        "loose_ports": ["IP:"],
+        "inputs": [
+            "Mic/Line 1-16",
+        ],
+        "outputs": [
+            "Line Out 1-8",
+        ],
+        "control": ["Dante Primary", "Dante Secondary"],
+    },
+    {
+        "title": "RIO3224-D",
+        "name": "Yamaha RIO3224-D",
+        "subtitle": "Dante Stagebox 32/24",
+        "tags": ["Audio", "Stagebox"],
+        "width": 170,
+        "loose_ports": ["IP:"],
+        "inputs": [
+            "Mic/Line 1-32",
+        ],
+        "outputs": [
+            "Line Out 1-16",
+            "AES/EBU Out 1-8",
+        ],
+        "control": ["Dante Primary", "Dante Secondary"],
+    },
 ]
 
 

@@ -44,6 +44,26 @@ DEVICES = [
             "HDMI Out 4",
         ],
     },
+    {
+        "title": "HDMI Line RX",
+        "name": "Kramer HDMI Line Receiver",
+        "subtitle": "HDBaseT Receiver",
+        "tags": ["Video", "Extender"],
+        "width": 160,
+        "inputs": ["HDBT In (Cat6)"],
+        "outputs": ["HDMI Out"],
+        "control": ["RS-232", "IR"],
+    },
+    {
+        "title": "VIA Connect2",
+        "name": "Kramer VIA Connect²",
+        "subtitle": "Wireless Content Solution",
+        "tags": ["Video", "Wireless"],
+        "width": 170,
+        "loose_ports": ["IP:", "WiFi Casting"],
+        "outputs": ["HDMI Out"],
+        "control": ["LAN", "USB"],
+    },
 ]
 
 

@@ -55,6 +55,8 @@ DEVICES = [
     panel("LedSkin 2.5mm", "LedSkin 2.5mm Panel", "2.5mm"),
     panel("Unilumin UPad IV XS", "Unilumin UPad IV XS", "1.9mm"),
     panel("3.9mm 500x500", "3.9mm 500×500 Panel", "Outdoor Cabinet"),
+    panel("Unilumin uPad IV", "Unilumin uPad IV", "2.6mm"),
+    panel("2.5mm 500x500", "2.5mm 500×500 Panel", "Indoor Cabinet"),
 ]
 
 
