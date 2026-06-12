@@ -2,11 +2,27 @@
 
 Tracking against the live Current RMS product catalogue. Last full stock sync: **12 June 2026** (full catalogue pull, ~1,760 products incl. sub-rent placeholders → active, signal-flow-relevant kit diffed against every library). Previous baseline: April 2026 rental income export (824 products → 269 signal-flow-relevant).
 
-## Status: synced to Current RMS, June 2026
+## Status: synced to Current RMS + accuracy-verified, June 2026
 
-**29 libraries / ~314 device shapes** (+ 18 cable styles).
+**30 libraries / ~328 device shapes** (+ 18 cable styles). Every shape fact-checked against manufacturer specs 12 June 2026; purchase-list kit pre-built and tagged "On Order".
 
 June 2026 sync added ~75 shapes: two new libraries (`projectors.xml`, `roland.xml`), legacy serialised kit that never appeared in the income report (Yamaha CL5/QL5/LS9/M7CL + RIOs, Midas M32, d&b Q/B/C-series, Shure ULX-D/Axient/UHF-R, Barco E2 Jr/EC-30/EC-50/PDS902, Extron, Lightware, Teradek Bolt), and new stock since April (Shure SM7B, Netgear M4250, Mio Mix 104, Fischer IEM BP, Cyclone 4K, BrightSign HD224, ScreenBeam 1100+, HDBaseT 4KEX70-L, KVMs, Kramer VIA Connect², DJI Osmo Pocket 3, Asus NUC13, ASUS TUF A15, Beetronics 22" touch, Philips 27", BMD Cleanswitch 12x12 / Sync Generator / ATEM Mini Extreme ISO, DrayTek AP 960C, Unilumin uPad IV, and more).
+
+## Pipeline (on order — purchase list, RS workpad 11/05/26)
+
+Pre-built shapes for kit on the purchase list, tagged "On Order" in draw.io. Port layouts verified against manufacturer datasheets:
+
+- `disguise.xml` (NEW) — **disguise EX 3+** (3x DP 1.4 + GUI; 1x12G/4x3G HD-BNC + HDMI capture; 2x10GbE + 2x100G QSFP28) and **GX 2c** (2x VFC slots shipping HDMI 2.0; 8x 3G HD-BNC capture; genlock loop)
+- `yamaha.xml` — **DM7 Compact** (16 omni in/out, Dante 144ch, PY slot, TC in; no AES in, USB-MIDI only)
+- `sennheiser.xml` — **XSW IEM SR** (2x combo in, BNC antenna out) + **EK bodypack**
+- `extenders.xml` — **Lightware MX2-8X8-HDMI20-CA** (8x8 HDMI 2.0 + 2/2 Phoenix audio), **Adder ADDERLink XDIP** (KVM-over-IP, one SKU = TX/RX switchable, single 1GbE PoE link)
+- `network.xml` — **Netgear M4350-24F4V** (all-fibre: 24x 10G SFP+ + 4x 25G SFP28; copper needs transceivers)
+- `audio-other.xml` — **Rosendahl MIF4** (LTC/MIDI/ref-in sync), **Turtle AV Mineola 4x4** (Dante bridge, PoE), **Dante AVIO USB 2x2**
+- `computers.xml` — **Dell Precision 5690** (HDMI 2.1 + 2x TB4 + USB-C DP; no built-in LAN)
+- `displays.xml` — **49" Digital Signage Pillar** (generic totem)
+- `blackmagic.xml` — **Videohub 10x10 12G** (10x10 12G-SDI, ref in/loop)
+
+Already covered from the same list: DM3, RIO1608-D3, EW-DX kit, ADP-UHF, SM58/57, PC Balance Box, DPA 6066, Samsung 50-85", LEDskin 1.9, Barco E2, Coex MX30/MX40 (MX40 Pro shape retained for this reason), IIYAMA 49/55 touch, M4250-10G2F, TP-Link router (variant). Out of scope: Astera/Avolites/Luminex/Chauvet (lighting), cables, stands, staging, power distro, APC UPS.
 
 ## Retired kit (kept for sub-rent diagrams)
 

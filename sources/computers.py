@@ -218,6 +218,20 @@ DEVICES = [
         ],
         "control": ["USB-A"],
     },
+    {
+        "title": "Dell Precision 5690",
+        "name": "Dell Precision 5690",
+        "subtitle": "16\" Workstation (on order)",
+        "tags": ["Computer", "On Order"],
+        "width": 180,
+        "loose_ports": ["WiFi"],
+        "outputs": [
+            "HDMI 2.1",
+            "Thunderbolt 4 x2 (DP)",
+            "USB-C (DP)",
+        ],
+        "control": ["SD Slot"],
+    },
 ]
 
 

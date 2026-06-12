@@ -355,6 +355,51 @@ DEVICES = [
         "inputs": ["In L (XLR)", "In R (XLR)"],
         "outputs": ["Phones Out (3.5mm)"],
     },
+    {
+        "title": "Rosendahl MIF4",
+        "name": "Rosendahl MIF4",
+        "subtitle": "MIDI/LTC Sync Interface (on order)",
+        "tags": ["Audio", "Sync", "On Order"],
+        "width": 170,
+        "info_row": True,
+        "inputs": [
+            "LTC In (XLR)",
+            "MIDI In",
+            "Ref In (BNC: BB/Tri/WC)",
+        ],
+        "outputs": [
+            "LTC Out (XLR)",
+            "MIDI Out",
+        ],
+        "control": ["USB (MIDI + Power)"],
+    },
+    {
+        "title": "Turtle AV 4x4",
+        "name": "Turtle AV Mineola 4x4",
+        "subtitle": "Dante Audio Bridge (on order)",
+        "tags": ["Audio", "Network", "On Order"],
+        "width": 170,
+        "info_row": True,
+        "loose_ports": ["IP:", "PoE / DC In"],
+        "inputs": [
+            "In 1-4 (XLR/TRS Combo)",
+        ],
+        "outputs": [
+            "Out 1-4 (XLR)",
+        ],
+        "control": ["Dante Primary (etherCON)", "Dante Secondary (etherCON)"],
+    },
+    {
+        "title": "Dante AVIO USB",
+        "name": "Audinate Dante AVIO USB 2x2",
+        "subtitle": "USB-Dante Adapter (on order)",
+        "tags": ["Audio", "Network", "On Order"],
+        "width": 170,
+        "info_row": True,
+        "inputs": ["USB-A (2ch to Dante)"],
+        "outputs": ["USB-A (2ch from Dante)"],
+        "control": ["Dante (RJ45, PoE)"],
+    },
 ]
 
 

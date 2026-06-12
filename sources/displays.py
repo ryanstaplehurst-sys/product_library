@@ -110,6 +110,17 @@ DEVICES = [
         "width": 160,
         "inputs": ["HDMI In", "VGA In"],
     },
+    {
+        "title": "49 Signage Pillar",
+        "name": "49\" Digital Signage Pillar",
+        "subtitle": "Freestanding Totem (on order)",
+        "tags": ["Display", "On Order"],
+        "width": 170,
+        "info_row": True,
+        "loose_ports": ["Mains In"],
+        "inputs": ["HDMI In", "USB (Media)"],
+        "control": ["LAN"],
+    },
 ]
 
 

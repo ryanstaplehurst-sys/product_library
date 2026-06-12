@@ -251,6 +251,34 @@ DEVICES = [
         ],
         "control": ["Dante Primary", "Dante Secondary"],
     },
+    {
+        "title": "DM7C",
+        "name": "Yamaha DM7 Compact",
+        "subtitle": "72-ch Dante Console (on order)",
+        "tags": ["Audio", "Console", "On Order"],
+        "width": 180,
+        "loose_ports": ["IP:"],
+        "inputs": [
+            "Omni In 1-16",
+            "TC In (XLR)",
+            "Dante In (144ch)",
+            "Word Clock In",
+        ],
+        "outputs": [
+            "Omni Out 1-16",
+            "Dante Out (144ch)",
+            "AES/EBU Out",
+            "Word Clock Out",
+        ],
+        "control": [
+            "Dante Primary",
+            "Dante Secondary",
+            "PY Slot",
+            "Network",
+            "USB-C to Host",
+            "GPI 5/5",
+        ],
+    },
 ]
 
 

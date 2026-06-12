@@ -2,7 +2,7 @@
 
 A curated set of draw.io shape libraries for the AV equipment Insert Productions actually rents, plus a Python toolkit that lets Claude compose `.drawio` signal-flow diagrams from free-form briefs.
 
-**29 libraries · ~314 device shapes · synced to the live Current RMS catalogue, June 2026.**
+**30 libraries · ~328 device shapes · synced to Current RMS, accuracy-verified against manufacturer specs, June 2026.**
 
 See [`coverage_status.md`](coverage_status.md) for the up-to-date inventory.
 
@@ -23,7 +23,7 @@ The short version:
 
 1. Click the green **Code** button at the top of this repo → **Download ZIP**. Extract somewhere sensible.
 2. Open draw.io (desktop or app.diagrams.net).
-3. **File → Open Library from File…** → navigate into the `libraries/` folder → select all 29 `.xml` files (Cmd+A or Ctrl+A) → Open.
+3. **File → Open Library from File…** → navigate into the `libraries/` folder → select all 30 `.xml` files (Cmd+A or Ctrl+A) → Open.
 4. Libraries appear in the left panel. Drag any device onto the canvas.
 
 `_cables.xml` contains pre-styled edge templates you can drop between ports for the cable convention.
@@ -121,4 +121,4 @@ Cables, adapters, power, brackets, mounts, stands, packaging, ladders, batteries
 
 ## Licence
 
-Internal Insert Productions tool. Device specs are derived from manufacturer-published port lists; if you redistribute, check trademark guidance for each manufacturer.
+Internal Insert Productions tool. Device specs are derived from manufacturer-published port lists; if you redistribute, check trademark guida

@@ -232,6 +232,30 @@ DEVICES = [
             "Mic Out (XLR)",
         ],
     },
+    {
+        "title": "XSW IEM SR",
+        "name": "Sennheiser XSW IEM SR",
+        "subtitle": "Stereo IEM Transmitter (on order)",
+        "tags": ["Audio", "Wireless", "On Order"],
+        "width": 170,
+        "inputs": [
+            "In L (XLR/TRS Combo)",
+            "In R (XLR/TRS Combo)",
+        ],
+        "outputs": [
+            "Antenna Out (BNC)",
+            "Phones Monitor (1/4\")",
+        ],
+    },
+    {
+        "title": "XSW IEM EK",
+        "name": "Sennheiser XSW IEM EK",
+        "subtitle": "IEM Bodypack Receiver (on order)",
+        "tags": ["Audio", "Wireless", "On Order"],
+        "width": 170,
+        "inputs": ["RF In (Antenna)"],
+        "outputs": ["Phones Out (3.5mm)"],
+    },
 ]
 
 

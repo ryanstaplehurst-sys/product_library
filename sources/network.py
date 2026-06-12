@@ -232,6 +232,19 @@ DEVICES = [
             "SFP+",
         ],
     },
+    {
+        "title": "Netgear M4350-24F4V",
+        "name": "Netgear M4350-24F4V (XSM4328FV)",
+        "subtitle": "AV Fibre Switch (on order)",
+        "tags": ["Network", "Switch", "On Order"],
+        "width": 180,
+        "loose_ports": ["IP:", "Mains In (1+1 PSU)"],
+        "inputs": [
+            "SFP+ 1-24 (10G Fibre)",
+            "SFP28 25-28 (25G Uplink)",
+        ],
+        "control": ["OOB Mgmt (RJ45)", "Console (USB-C)", "USB-A"],
+    },
 ]
 
 

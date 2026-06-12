@@ -260,6 +260,43 @@ DEVICES = [
         "inputs": ["RF In"],
         "outputs": ["SDI Out"],
     },
+    {
+        "title": "Lightware MX2 8x8",
+        "name": "Lightware MX2-8X8-HDMI20-CA",
+        "subtitle": "8x8 HDMI 2.0 Matrix (on order)",
+        "tags": ["Video", "Matrix", "On Order"],
+        "width": 180,
+        "info_row": True,
+        "loose_ports": ["IP:"],
+        "inputs": [
+            "HDMI In 1-8 (2.0)",
+            "Audio In 1-2 (Phoenix)",
+        ],
+        "outputs": [
+            "HDMI Out 1-8 (2.0)",
+            "Audio Out 1-2 (Phoenix)",
+        ],
+        "control": ["LAN", "RS-232", "Mini-USB"],
+    },
+    {
+        "title": "Adder XDIP",
+        "name": "Adder ADDERLink XDIP",
+        "subtitle": "KVM-over-IP Node TX/RX (on order)",
+        "tags": ["Video", "KVM", "On Order"],
+        "width": 180,
+        "info_row": True,
+        "inputs": [
+            "HDMI In (from PC)",
+            "USB-B (to PC)",
+            "Audio In (3.5mm)",
+        ],
+        "outputs": [
+            "HDMI Out (Console)",
+            "USB-A 1-2 (KB/Mouse)",
+            "Audio Out (3.5mm)",
+        ],
+        "control": ["Link (1GbE, PoE)"],
+    },
 ]
 
 
