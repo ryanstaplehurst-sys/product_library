@@ -41,6 +41,8 @@ DEVICES = [
         "outputs": [
             "USB-A 1",
             "USB-A 2",
+            "USB-A 3",
+            "USB-A 4",
         ],
     },
     {
@@ -96,7 +98,6 @@ DEVICES = [
             "HDMI Out 4",
         ],
         "control": [
-            "Network",
             "RS-232",
             "IR",
         ],
@@ -119,10 +120,11 @@ DEVICES = [
             "HDMI Out 2",
             "HDMI Out 3",
             "HDMI Out 4",
+            "DP Loop Out",
         ],
         "control": [
-            "Network",
-            "RS-232",
+            "LAN 1",
+            "LAN 2 (Loop)",
             "USB",
         ],
     },
@@ -134,7 +136,7 @@ DEVICES = [
         "width": 170,
         "inputs": ["HDMI In"],
         "outputs": ["HDBT Out (Cat6)"],
-        "control": ["IR"],
+        "control": ["RS-232", "IR"],
     },
     {
         "title": "HDBaseT 4KEX70 RX",
@@ -144,7 +146,7 @@ DEVICES = [
         "width": 170,
         "inputs": ["HDBT In (Cat6)"],
         "outputs": ["HDMI Out"],
-        "control": ["IR"],
+        "control": ["RS-232", "IR"],
     },
     {
         "title": "MT-VIKI KVM 8",
@@ -247,7 +249,7 @@ DEVICES = [
         "tags": ["Video", "Wireless"],
         "width": 170,
         "inputs": ["SDI In"],
-        "outputs": ["RF Out"],
+        "outputs": ["SDI Loop Out", "RF Out"],
     },
     {
         "title": "Teradek Bolt RX",

@@ -44,9 +44,10 @@ DEVICES = [
             "AES50 A",
             "AES50 B",
             "ULTRANET",
+            "ADAT Out x3",
             "MIDI In",
             "MIDI Out",
-            "Network",
+            "USB-B",
         ],
     },
     {
@@ -63,10 +64,11 @@ DEVICES = [
         ],
         "outputs": [
             "XLR Out 1-16",
+            "Aux Out 1-6 (TRS)",
             "Monitor Out L/R",
             "AES/EBU Out",
         ],
-        "control": ["AES50 A", "AES50 B", "Card Slot", "Network", "MIDI"],
+        "control": ["AES50 A", "AES50 B", "Card Slot", "ULTRANET", "Network", "MIDI", "USB"],
     },
 ]
 

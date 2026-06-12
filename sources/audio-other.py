@@ -39,9 +39,9 @@ DEVICES = [
         "info_row": True,
         "loose_ports": ["Mains In"],
         "inputs": [
-            "Input 1 (XLR/TRS)",
-            "Input 2 (RCA L)",
-            "Input 3 (RCA R)",
+            "Input A (XLR/TRS)",
+            "Input B (XLR/TRS)",
+            "Input C (3.5mm)",
         ],
         "outputs": [
             "Mix Out (XLR Thru)",
@@ -122,8 +122,7 @@ DEVICES = [
             "Out 2 (TRS)",
             "Out 3 (TRS)",
             "Out 4 (TRS)",
-            "Phones 1",
-            "Phones 2",
+            "Phones",
             "MIDI Out",
         ],
         "control": [
@@ -143,18 +142,19 @@ DEVICES = [
             "Mic/Line 2 (XLR)",
             "Mic/Line 3 (XLR)",
             "Mic/Line 4 (XLR)",
+            "Camera In (3.5mm)",
             "HDMI In (TC)",
+            "TC In (BNC)",
             "Slate Mic",
         ],
         "outputs": [
-            "Camera Out L (3.5mm)",
-            "Camera Out R (3.5mm)",
+            "Camera Out (3.5mm)",
+            "Line Out (3.5mm)",
             "HDMI Out (TC)",
             "Phones",
         ],
         "control": [
             "USB",
-            "TC In/Out (BNC)",
         ],
     },
     {
@@ -256,15 +256,15 @@ DEVICES = [
         "info_row": True,
         "loose_ports": ["Mains In"],
         "inputs": [
-            "Mic/Line 1 (XLR/TRS)",
-            "Mic/Line 2 (XLR/TRS)",
-            "Hi-Z 3 (TRS)",
-            "Hi-Z 4 (TRS)",
-            "Stereo In L/R (RCA)",
+            "Mic In (XLR/TRS)",
+            "Hi-Z In (TS)",
+            "Line In L/R (Combo/RCA)",
+            "Aux In (3.5mm)",
             "Bluetooth In",
         ],
         "outputs": [
-            "Mix Out (XLR Thru)",
+            "System Out (XLR)",
+            "Sub Out (XLR)",
         ],
     },
     {
@@ -276,14 +276,15 @@ DEVICES = [
         "info_row": True,
         "loose_ports": ["Mains In (Sub)"],
         "inputs": [
-            "Mic/Line 1 (XLR/TRS)",
-            "Mic/Line 2 (XLR/TRS)",
-            "Stereo In L/R (RCA)",
+            "Mic In (XLR/TRS)",
+            "Hi-Z In (TS)",
+            "Line In L/R (Combo/RCA)",
+            "Aux In (3.5mm)",
             "Bluetooth In",
         ],
         "outputs": [
-            "Mix Out (XLR Thru)",
-            "Column Out (TRS)",
+            "System Out (XLR)",
+            "Sub Out (XLR)",
         ],
     },
     {
@@ -324,26 +325,26 @@ DEVICES = [
         "info_row": True,
         "loose_ports": ["Mains In"],
         "inputs": [
-            "Input (XLR/TRS)",
+            "Input (TRS)",
             "RCA L/R",
             "Aux (3.5mm)",
         ],
     },
     {
         "title": "Mio Mix 104",
-        "name": "Mio Mix 104",
+        "name": "Soundsation MioMix 104",
         "subtitle": "Analogue Mixer",
         "tags": ["Audio", "Console"],
         "width": 160,
         "inputs": [
-            "Mic 1-2 (XLR)",
-            "Line 3/4 (TRS)",
+            "Mic 1 (XLR/TRS)",
+            "Line 2-3 (TRS)",
+            "St 4/5 (RCA/3.5mm)",
         ],
         "outputs": [
-            "Main L/R",
+            "Main L/R (XLR)",
             "Phones Out",
         ],
-        "control": ["USB"],
     },
     {
         "title": "Fischer IEM BP",
@@ -351,8 +352,8 @@ DEVICES = [
         "subtitle": "Wired IEM Beltpack",
         "tags": ["Audio", "Monitoring"],
         "width": 170,
-        "inputs": ["Line In L/R (XLR)"],
-        "outputs": ["Phones Out", "Link Thru"],
+        "inputs": ["In L (XLR)", "In R (XLR)"],
+        "outputs": ["Phones Out (3.5mm)"],
     },
 ]
 

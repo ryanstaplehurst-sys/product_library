@@ -59,8 +59,8 @@ Legacy LG/NEC/Panasonic displays (43-98") — port-identical to the Samsung size
 
 ## Notes
 
-- Where the exact port layout is well known (Yamaha QL1, Sennheiser EW-DX, Midas DL32, Barco E2, etc.) the libraries are accurate.
-- For obscure switches/routers/converters I built a sensible generic chassis. Correct on use as needed.
+- **Accuracy pass, 12 June 2026:** every shape was fact-checked against manufacturer spec sheets/manuals; ~50 port-layout corrections applied across 16 libraries. Notable: Shure "AD4DA" renamed AD4D (real model), UA845 → UA845UWB, Kramer "VM-4H2 1:2" renamed VM-2H2 (real 1:2 model); all Barco shapes rebuilt from official spec sheets (E2 Gen 2 = 16 SDI/12 HDMI/12 DP in; PDS902 is DVI/VGA/SDI only — no HDMI); d&b passive cabinets corrected to 1-in/1-link (B2 = single EP5 no link, C-series = EP5), D12 corrected to 2-channel, D20/D40/D80 to 4x switchable analog/AES3 inputs; Yamaha QL5 = 32 omni in, no AES input on CL/QL; SQ5/CQ-12T/DM3/DL32/M32 local I/O corrected; PT-RZ120 has no SDI, PT-RZ21K has no VGA and DIGITAL LINK only via optional board; Netgear M4250 = 10G2F (8 PoE+ / 2 GbE / 2 SFP). Remaining judgment calls: LINDY USB RX drawn as 4-port (1-port model also exists), Lightware fibre is a generic chassis, Mac Mini/Surface Pro drawn as the generation Insert most likely holds.
+- For obscure switches/routers/converters the chassis is a sensible generic. Correct on use as needed.
 - Large-format desks added June 2026 (CL5, M7CL, M32 etc.) use grouped port ranges ("Omni In 1-32") rather than one cell per socket, to keep tile heights sane. The April-era desks (QL1, SQ5) keep individual ports.
 - Lighting (64+ products) is a separate domain — different convention (DMX universes, hot patches, rigging plots) — left for a future skill.
 - Computers get minimal chassis — generally TB/HDMI outs + ethernet + USB. Model variants don't change port layout meaningfully, but each is a separate library tile so techs can find it by GPU/CPU label.

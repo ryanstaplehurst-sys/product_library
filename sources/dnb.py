@@ -2,15 +2,15 @@
 dnb.py — d&b audiotechnik library specs.
 
 Devices:
-    - D12, D20, D40, D80   — 4-channel amplifiers
-    - E8                    — point source loudspeaker (passive)
-    - M4                    — stage monitor (passive)
-    - T10                   — line array element (passive)
-    - V-Sub                 — flown subwoofer (passive)
-    - Y10P, Y7P             — point source loudspeakers (passive)
+    - D12              — legacy 2-channel amplifier (CAN only)
+    - D20, D40, D80    — 4-channel amplifiers (4x switchable analog/AES3 in)
+    - Passive cabinets — NL4 pair wired parallel (1 in + 1 link) unless noted
+    - B2               — single EP5, no link
+    - C4, C7           — EP5 pair wired parallel
+    - DS10             — Dante > AES3 network bridge
+    - R70              — Ethernet-CAN interface
 
-All speakers driven by d&b amps via NL4. Models with built-in amps would
-have different chassis but Insert's stock here is passive.
+Port layouts verified against d&b hardware manuals, June 2026.
 """
 
 from pathlib import Path
@@ -22,7 +22,7 @@ sys.path.insert(0, str(REPO / "scripts"))
 from library_io import write_library  # noqa: E402
 
 
-def amp(model, channels=4, name_suffix="4-ch Amplifier"):
+def amp4(model, name_suffix="4-ch Amplifier"):
     return {
         "title": f"d&b {model}",
         "name": f"d&b {model}",
@@ -31,47 +31,70 @@ def amp(model, channels=4, name_suffix="4-ch Amplifier"):
         "width": 170,
         "loose_ports": ["IP:", "Mains In"],
         "inputs": [
-            "AES In A (XLR)",
-            "AES In B (XLR)",
-            "Analog In A (XLR)",
-            "Analog In B (XLR)",
+            "Input 1 (XLR Analog/AES3)",
+            "Input 2 (XLR Analog/AES3)",
+            "Input 3 (XLR Analog/AES3)",
+            "Input 4 (XLR Analog/AES3)",
         ],
         "outputs": [
+            "Link 1-4 (XLR)",
             "Out 1 (NL4)",
             "Out 2 (NL4)",
             "Out 3 (NL4)",
             "Out 4 (NL4)",
         ],
         "control": [
-            "Network 1",
-            "Network 2",
-            "CAN-Bus",
+            "Ethernet 1 (etherCON)",
+            "Ethernet 2 (etherCON)",
+            "CAN 1 (RJ45)",
+            "CAN 2 (RJ45)",
         ],
     }
 
 
-def speaker(model, subtitle, dual_input=False):
-    return {
+def speaker(model, subtitle, connector="NL4", link=True):
+    d = {
         "title": f"d&b {model}",
         "name": f"d&b {model}",
         "subtitle": subtitle,
         "tags": ["Audio", "Speaker"],
         "width": 160,
         "info_row": True,
-        "inputs": (
-            ["Speaker In 1 (NL4)", "Speaker In 2 (NL4)"]
-            if dual_input
-            else ["Speaker In (NL4)"]
-        ),
-        "outputs": ["Speaker Link (NL4)"],
+        "inputs": [f"Speaker In ({connector})"],
     }
+    if link:
+        d["outputs"] = [f"Speaker Link ({connector})"]
+    return d
 
 
 DEVICES = [
-    amp("D12", name_suffix="Legacy 4-ch Amp"),
-    amp("D20"),
-    amp("D40"),
-    amp("D80", name_suffix="High-power 4-ch Amp"),
+    {
+        "title": "d&b D12",
+        "name": "d&b D12",
+        "subtitle": "Legacy 2-ch Amp",
+        "tags": ["Audio", "Amplifier"],
+        "width": 170,
+        "loose_ports": ["Mains In"],
+        "inputs": [
+            "Analog In A (XLR)",
+            "Analog In B (XLR)",
+            "AES In D1/D2 (XLR)",
+        ],
+        "outputs": [
+            "Link A (XLR)",
+            "Link B (XLR)",
+            "AES Link (XLR)",
+            "Out A (NL4)",
+            "Out B (NL4)",
+        ],
+        "control": [
+            "CAN Remote 1 (RJ45)",
+            "CAN Remote 2 (RJ45)",
+        ],
+    },
+    amp4("D20"),
+    amp4("D40"),
+    amp4("D80", name_suffix="High-power 4-ch Amp"),
     speaker("E8", "8\" Point Source"),
     speaker("M4", "Stage Monitor"),
     speaker("T10", "Line Array Element"),
@@ -80,31 +103,40 @@ DEVICES = [
     speaker("Y7P", "7\" Point Source"),
     speaker("E6", "Compact Loudspeaker"),
     speaker("MAX 15", "Stage Monitor"),
-    speaker("Q1", "Line-Array Loudspeaker", dual_input=True),
-    speaker("Q7", "Point-Source Loudspeaker", dual_input=True),
-    speaker("Q-Sub", "Subwoofer", dual_input=True),
-    speaker("Y8", "Line-Array Loudspeaker", dual_input=True),
-    speaker("Y-Sub", "Subwoofer", dual_input=True),
-    speaker("B2", "Subwoofer", dual_input=True),
-    speaker("B6", "Subwoofer", dual_input=True),
-    speaker("B22", "Subwoofer", dual_input=True),
-    speaker("C4", "Loudspeaker", dual_input=True),
-    speaker("C7", "Full-Range Loudspeaker", dual_input=True),
+    speaker("Q1", "Line-Array Loudspeaker"),
+    speaker("Q7", "Point-Source Loudspeaker"),
+    speaker("Q-Sub", "Subwoofer"),
+    speaker("Y8", "Line-Array Loudspeaker"),
+    speaker("Y-Sub", "Subwoofer"),
+    speaker("B2", "Subwoofer", connector="EP5", link=False),
+    speaker("B6", "Subwoofer"),
+    speaker("B22", "Subwoofer"),
+    speaker("C4", "Loudspeaker", connector="EP5"),
+    speaker("C7", "Full-Range Loudspeaker", connector="EP5"),
     {
         "title": "d&b DS10",
         "name": "d&b DS10",
         "subtitle": "Audio Network Bridge",
         "tags": ["Audio", "Network"],
-        "width": 170,
+        "width": 180,
         "loose_ports": ["IP:"],
-        "inputs": ["Dante Primary", "Dante Secondary"],
-        "outputs": [
-            "AES3 Out 1",
-            "AES3 Out 2",
-            "AES3 Out 3",
-            "AES3 Out 4",
+        "inputs": [
+            "Dante Primary",
+            "Dante Secondary",
+            "AES3 In 1/2",
+            "AES3 In 3/4",
         ],
-        "control": ["Ethernet Out 1", "Ethernet Out 2"],
+        "outputs": [
+            "AES3 Out 1/2",
+            "AES3 Out 3/4",
+            "AES3 Out 5/6",
+            "AES3 Out 7/8",
+            "AES3 Out 9/10",
+            "AES3 Out 11/12",
+            "AES3 Out 13/14",
+            "AES3 Out 15/16",
+        ],
+        "control": ["Ethernet 1-5 (etherCON switch)"],
     },
     {
         "title": "d&b R70",

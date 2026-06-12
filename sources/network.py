@@ -58,8 +58,26 @@ def ap(title, name, subtitle, has_uplink=True):
 
 DEVICES = [
     # DrayTek
-    router("Vigor 3910 P", "DrayTek Vigor 3910 P", "Multi-WAN Router", lan_ports=4, has_sfp=True),
-    switch("Vigor G2280x", "DrayTek Vigor G2280x", "28-port Managed PoE Switch", ports=24, sfp=4),
+    {
+        "title": "Vigor 3910",
+        "name": "DrayTek Vigor 3910",
+        "subtitle": "Multi-WAN Router",
+        "tags": ["Network", "Router"],
+        "width": 170,
+        "loose_ports": ["IP:", "Mains In"],
+        "inputs": [
+            "WAN 1 (SFP+)",
+            "WAN 2 (SFP+)",
+            "P3 (2.5G)",
+            "P4 (2.5G)",
+            "P5",
+            "P6",
+            "P7",
+            "P8",
+        ],
+        "control": ["Console", "USB"],
+    },
+    switch("Vigor G2280x", "DrayTek Vigor G2280x", "28-port Managed Switch", ports=24, sfp=4),
     switch("Vigor P2280x", "DrayTek Vigor P2280x", "28-port Managed PoE Switch", ports=24, sfp=4),
     switch("Vigor P2100", "DrayTek Vigor P2100", "10-port PoE Switch", ports=8, sfp=2),
     ap("Vigor AP 962C", "DrayTek VigorAP 962C", "Wi-Fi 6 Access Point"),
@@ -67,8 +85,16 @@ DEVICES = [
     # Netgear
     switch("GS116PP", "Netgear GS116PP", "16-port Unmanaged PoE+", ports=16),
     switch("GS724T", "Netgear ProSAFE GS724T", "24-port Managed Switch", ports=24, sfp=2),
-    switch("GS748T", "Netgear ProSAFE GS748T", "48-port Managed Switch", ports=48, sfp=4),
-    switch("MS510TXPP", "Netgear ProSAFE MS510TXPP", "10-port Multi-Gig PoE+", ports=8, sfp=2),
+    switch("GS748T", "Netgear ProSAFE GS748T", "48-port Managed Switch", ports=48, sfp=2),
+    {
+        "title": "MS510TXPP",
+        "name": "Netgear ProSAFE MS510TXPP",
+        "subtitle": "10-port Multi-Gig PoE+",
+        "tags": ["Network", "Switch"],
+        "width": 170,
+        "loose_ports": ["IP:", "Mains In"],
+        "inputs": [f"Port {i+1}" for i in range(8)] + ["10G RJ45 Uplink", "10G SFP+ Uplink"],
+    },
     switch("JGS516PE", "Netgear ProSAFE Plus JGS516PE", "16-port Managed Switch", ports=16),
 
     # TP-Link
@@ -101,8 +127,7 @@ DEVICES = [
             "LAN 6",
             "LAN 7",
             "LAN 8",
-            "SFP+ 9",
-            "SFP+ 10",
+            "LAN SFP+",
         ],
         "control": [
             "Console",
@@ -140,16 +165,17 @@ DEVICES = [
     },
     {
         "title": "Netgear M4250",
-        "name": "Netgear M4250 (AV Line)",
+        "name": "Netgear M4250-10G2F-PoE+ (AV Line)",
         "subtitle": "12-Port AV/Dante Switch",
         "tags": ["Network", "Switch"],
         "width": 170,
         "loose_ports": ["IP:"],
         "inputs": [
-            "Ports 1-12 (PoE+)",
-            "SFP 1-2",
+            "Ports 1-8 (PoE+)",
+            "Ports 9-10",
+            "SFP 11-12",
         ],
-        "control": ["OOB Mgmt"],
+        "control": ["OOB Mgmt", "Console"],
     },
     {
         "title": "HP Baseline",
@@ -169,7 +195,7 @@ DEVICES = [
         "loose_ports": ["IP:"],
         "inputs": [
             "Ports 1-16",
-            "SFP 1-2",
+            "SFP 1-4",
         ],
     },
     {
@@ -189,9 +215,10 @@ DEVICES = [
         "width": 160,
         "loose_ports": ["IP:"],
         "inputs": [
-            "Ports 1-16",
-            "Combo 17-20 (SFP)",
+            "Ports 1-18",
+            "Combo 19-20 (RJ45/SFP)",
         ],
+        "control": ["Console"],
     },
     {
         "title": "MikroTik RB4011",

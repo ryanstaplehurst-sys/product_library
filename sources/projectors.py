@@ -1,17 +1,15 @@
 """
 projectors.py — Projector library specs.
 
-Run from the repo root:
-    python3 sources/projectors.py
-which writes libraries/projectors.xml.
-
-Devices included (June 2026 stock sync):
-    - Epson EB-PU2010B          — 10K lumen laser
-    - Panasonic PT-MZ770        — 8K lumen LCD laser
-    - Panasonic PT-RZ970        — 10K lumen DLP laser
-    - Panasonic PT-RZ120        — 12.5K lumen DLP laser
-    - Panasonic PT-RZ12KEJ      — 12K lumen 3-chip DLP laser
-    - Panasonic PT-RZ21K        — 21K lumen 3-chip DLP laser
+Port layouts verified against Epson/Panasonic spec sheets, June 2026:
+    - Epson EB-PU2010B   — HDMI/DVI-D/SDI(+loop)/VGA/HDBaseT
+    - Panasonic PT-MZ770 — HDMI x2/RGB BNC/VGA/DIGITAL LINK (no DVI)
+    - Panasonic PT-RZ970 — HDMI/DVI-D/SDI/VGA/DIGITAL LINK
+    - Panasonic PT-RZ120 — HDMI/DVI-D/VGA/DIGITAL LINK (no SDI in family
+      except RZ970)
+    - Panasonic PT-RZ12K — HDMI/DVI-D/SDI x2/VGA/DIGITAL LINK
+    - Panasonic PT-RZ21K — HDMI/DVI-D/SDI x2 only (DIGITAL LINK is an
+      optional board; no VGA)
 """
 
 from pathlib import Path
@@ -23,12 +21,7 @@ sys.path.insert(0, str(REPO / "scripts"))
 from library_io import write_library  # noqa: E402
 
 
-def projector(title, name, subtitle, sdi=0, digital_link=True):
-    inputs = ["HDMI In", "DVI-D In"]
-    inputs += [f"SDI In {i}" if sdi > 1 else "SDI In" for i in range(1, sdi + 1)]
-    inputs += ["Computer (VGA)"]
-    if digital_link:
-        inputs += ["DIGITAL LINK (HDBT)"]
+def projector(title, name, subtitle, inputs, outputs=None, control=None):
     return {
         "title": title,
         "name": name,
@@ -38,17 +31,43 @@ def projector(title, name, subtitle, sdi=0, digital_link=True):
         "info_row": True,
         "loose_ports": ["IP:"],
         "inputs": inputs,
-        "control": ["LAN", "RS-232", "Remote In"],
+        "outputs": outputs or [],
+        "control": control or ["LAN", "RS-232", "Remote In"],
     }
 
 
 DEVICES = [
-    projector("Epson PU2010B", "Epson EB-PU2010B", "10K Lumen Laser"),
-    projector("PT-MZ770", "Panasonic PT-MZ770", "8K Lumen LCD Laser"),
-    projector("PT-RZ970", "Panasonic PT-RZ970", "10K Lumen DLP Laser", sdi=1),
-    projector("PT-RZ120", "Panasonic PT-RZ120", "12.5K Lumen DLP Laser", sdi=1),
-    projector("PT-RZ12K", "Panasonic PT-RZ12KEJ", "12K Lumen 3-Chip DLP", sdi=2),
-    projector("PT-RZ21K", "Panasonic PT-RZ21K", "21K Lumen 3-Chip DLP", sdi=2),
+    projector(
+        "Epson PU2010B", "Epson EB-PU2010B", "10K Lumen Laser",
+        ["HDMI In", "DVI-D In", "SDI In (3G)", "Computer (VGA)", "HDBaseT"],
+        outputs=["SDI Out (Loop)"],
+        control=["LAN", "RS-232", "USB"],
+    ),
+    projector(
+        "PT-MZ770", "Panasonic PT-MZ770", "8K Lumen LCD Laser",
+        ["HDMI 1 In", "HDMI 2 In", "RGB 1 In (BNC)", "Computer (VGA)",
+         "DIGITAL LINK (HDBT)"],
+    ),
+    projector(
+        "PT-RZ970", "Panasonic PT-RZ970", "10K Lumen DLP Laser",
+        ["HDMI In", "DVI-D In", "SDI In", "RGB 1 In (BNC)", "Computer (VGA)",
+         "DIGITAL LINK (HDBT)"],
+    ),
+    projector(
+        "PT-RZ120", "Panasonic PT-RZ120", "12.5K Lumen DLP Laser",
+        ["HDMI In", "DVI-D In", "Computer (VGA)", "DIGITAL LINK (HDBT)"],
+    ),
+    projector(
+        "PT-RZ12K", "Panasonic PT-RZ12KEJ", "12K Lumen 3-Chip DLP",
+        ["HDMI In", "DVI-D In", "SDI In 1", "SDI In 2", "Computer (VGA)",
+         "DIGITAL LINK (HDBT)"],
+    ),
+    projector(
+        "PT-RZ21K", "Panasonic PT-RZ21K", "21K Lumen 3-Chip DLP",
+        ["HDMI In", "DVI-D In", "SDI In 1", "SDI In 2",
+         "DIGITAL LINK (optional board)"],
+        control=["LAN", "RS-232 In/Out", "Remote 1 In/Out", "Remote 2"],
+    ),
 ]
 
 

@@ -11,8 +11,8 @@ from library_io import write_library  # noqa: E402
 
 DEVICES = [
     {
-        "title": "VM-4H2 1:2",
-        "name": "Kramer VM-4H2 1:2",
+        "title": "VM-2H2",
+        "name": "Kramer VM-2H2",
         "subtitle": "4K HDMI 1:2 DA",
         "tags": ["Video", "Distribution"],
         "width": 160,
@@ -61,8 +61,9 @@ DEVICES = [
         "tags": ["Video", "Wireless"],
         "width": 170,
         "loose_ports": ["IP:", "WiFi Casting"],
+        "inputs": ["HDMI In"],
         "outputs": ["HDMI Out"],
-        "control": ["LAN", "USB"],
+        "control": ["LAN", "USB 3.0 x2", "USB 2.0"],
     },
 ]
 

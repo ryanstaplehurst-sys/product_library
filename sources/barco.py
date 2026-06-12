@@ -1,10 +1,13 @@
 """
 barco.py — Barco screen management library specs.
 
-Devices:
-    - E2 4K           — Event Master E2 4K screen management system
-    - S3 4K Gen 2     — ImagePRO/S3 4K screen management system, 2nd gen
-    - PDS 4K          — Presentation Switcher 4K
+Devices (port layouts verified against Barco spec sheets, June 2026):
+    - E2 4K (Gen 2)    — Event Master screen management system
+    - S3 4K Gen 2      — Tri-combo configuration
+    - PDS 4K           — Presentation switcher (HDMI + 12G-SDI variant)
+    - E2 Jr 4K         — stock 16-in / 8-out + 2 MV configuration
+    - EC-30, EC-50     — Event Master controllers
+    - PDS902           — legacy DVI/VGA/SDI presentation switcher
 """
 
 from pathlib import Path
@@ -19,100 +22,66 @@ from library_io import write_library  # noqa: E402
 DEVICES = [
     {
         "title": "E2 4K",
-        "name": "Barco E2 4K",
+        "name": "Barco E2 Gen 2",
         "subtitle": "Event Master 4K SMS",
         "tags": ["Video", "Switcher"],
-        "width": 180,
+        "width": 190,
         "loose_ports": ["IP:", "Genlock In", "Genlock Loop"],
         "inputs": [
-            "SDI 1 (12G)",
-            "SDI 2 (12G)",
-            "SDI 3 (12G)",
-            "SDI 4 (12G)",
-            "HDMI 1 (2.0)",
-            "HDMI 2 (2.0)",
-            "HDMI 3 (2.0)",
-            "HDMI 4 (2.0)",
-            "DP 1 (1.2)",
-            "DP 2 (1.2)",
-            "DVI 1",
-            "DVI 2",
+            "SDI In 1-16 (12G)",
+            "HDMI In 1-12 (2.0)",
+            "DP In 1-12 (1.2)",
         ],
         "outputs": [
-            "PGM 1 (HDMI)",
-            "PGM 2 (HDMI)",
-            "PGM 3 (HDMI)",
-            "PGM 4 (HDMI)",
-            "PVW 1",
-            "PVW 2",
-            "AUX 1",
-            "AUX 2",
-            "AUX 3",
-            "AUX 4",
-            "MV 1",
-            "MV 2",
+            "SDI Out 1-4 (12G)",
+            "HDMI Out 1-12 (2.0)",
+            "DP Out (1.2)",
+            "Multiview 1-4 (HDMI)",
         ],
         "control": [
-            "Network 1",
-            "Network 2",
+            "Network",
             "USB",
         ],
     },
     {
         "title": "S3 4K Gen 2",
-        "name": "Barco S3 4K Gen 2",
-        "subtitle": "Screen Management System",
+        "name": "Barco S3-4K Gen 2",
+        "subtitle": "Tri-combo SMS",
         "tags": ["Video", "Switcher"],
-        "width": 180,
+        "width": 190,
         "loose_ports": ["IP:", "Genlock In", "Genlock Loop"],
         "inputs": [
-            "SDI 1 (12G)",
-            "SDI 2 (12G)",
-            "SDI 3 (12G)",
-            "SDI 4 (12G)",
-            "HDMI 1",
-            "HDMI 2",
-            "DP 1",
-            "DP 2",
+            "SDI In 1-4 (12G)",
+            "HDMI In 1-5 (2.0)",
+            "DP In 1-5 (1.2)",
         ],
         "outputs": [
-            "PGM 1 (HDMI)",
-            "PGM 2 (HDMI)",
-            "PVW",
-            "AUX 1",
-            "AUX 2",
-            "MV",
+            "SDI Out 1-4 (12G)",
+            "HDMI Out 1-8 (2.0)",
+            "Multiview 1-4 (HDMI)",
         ],
         "control": [
             "Network",
-            "USB",
         ],
     },
     {
         "title": "PDS 4K",
-        "name": "Barco PDS 4K",
+        "name": "Barco PDS-4K",
         "subtitle": "Presentation Switcher 4K",
         "tags": ["Video", "Switcher"],
         "width": 180,
         "loose_ports": ["IP:"],
         "inputs": [
-            "SDI 1",
-            "SDI 2",
-            "HDMI 1",
-            "HDMI 2",
-            "HDMI 3",
-            "HDMI 4",
-            "DP",
-            "DVI",
+            "HDMI In 1-6 (2.0)",
+            "SDI In 1-2 (12G, SDI variant)",
         ],
         "outputs": [
-            "PGM (HDMI)",
-            "PGM (DVI)",
-            "PVW (HDMI)",
+            "PGM Out 1-4 (HDMI 2.0)",
+            "SDI Out 1-2 (12G, SDI variant)",
+            "Multiview (HDMI UHD)",
         ],
         "control": [
             "Network",
-            "RS-232",
             "USB",
         ],
     },
@@ -122,15 +91,15 @@ DEVICES = [
         "subtitle": "Screen Management System",
         "tags": ["Video", "Switcher"],
         "width": 190,
-        "loose_ports": ["IP:"],
+        "loose_ports": ["IP:", "Genlock In", "Genlock Loop"],
         "inputs": [
-            "Input 1-8 (SDI/HDMI/DP)",
+            "Input 1-16 (SDI/HDMI/DP)",
         ],
         "outputs": [
-            "Output 1-4",
-            "Multiview 1-2",
+            "Output 1-8 (SDI/HDMI)",
+            "Multiview 1-2 (HDMI)",
         ],
-        "control": ["Network 1", "Network 2", "Console (EC)"],
+        "control": ["Network"],
     },
     {
         "title": "EC-30",
@@ -138,8 +107,7 @@ DEVICES = [
         "subtitle": "Event Controller",
         "tags": ["Video", "Control"],
         "width": 170,
-        "loose_ports": ["IP:"],
-        "control": ["Network", "USB"],
+        "control": ["USB (Host PC)"],
     },
     {
         "title": "EC-50",
@@ -147,27 +115,29 @@ DEVICES = [
         "subtitle": "Event Controller",
         "tags": ["Video", "Control"],
         "width": 170,
-        "loose_ports": ["IP:"],
-        "outputs": ["DP Monitor 1", "DP Monitor 2"],
-        "control": ["Network", "USB"],
+        "outputs": ["DVI-D Monitor Out"],
+        "control": ["USB-B (Host)", "USB-A 1", "USB-A 2"],
     },
     {
         "title": "PDS902",
-        "name": "Barco PDS902",
+        "name": "Barco PDS-902 3G",
         "subtitle": "Seamless Presentation Switcher",
         "tags": ["Video", "Switcher"],
         "width": 180,
         "loose_ports": ["IP:"],
         "inputs": [
-            "HDMI 1-8",
-            "DP 9",
+            "DVI-I 1-4",
+            "VGA 5-8 (Analog)",
+            "SDI 9 (3G)",
         ],
         "outputs": [
-            "Program Out 1 (HDMI)",
-            "Program Out 2 (HDMI)",
-            "Multiview (HDMI)",
+            "PGM (DVI)",
+            "PGM (VGA)",
+            "PGM (SDI 3G)",
+            "PVW (DVI)",
+            "PVW (VGA)",
         ],
-        "control": ["Network", "RS-232"],
+        "control": ["Network", "USB"],
     },
 ]
 

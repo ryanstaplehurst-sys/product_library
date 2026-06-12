@@ -210,7 +210,8 @@ DEVICES = [
         ],
         "control": [
             "Network",
-            "USB-A",
+            "GPIO",
+            "IR (3.5mm)",
             "MicroSD",
         ],
     },
@@ -221,8 +222,9 @@ DEVICES = [
         "tags": ["Video", "Wireless"],
         "width": 180,
         "loose_ports": ["IP:", "Miracast / AirPlay / Cast"],
-        "outputs": ["HDMI Out"],
-        "control": ["LAN 1", "LAN 2"],
+        "inputs": ["HDMI In"],
+        "outputs": ["HDMI Out", "Audio Out (3.5mm)"],
+        "control": ["LAN", "USB-A x3"],
     },
     {
         "title": "APC Mini",

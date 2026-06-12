@@ -199,8 +199,10 @@ DEVICES = [
         "tags": ["Computer"],
         "width": 170,
         "loose_ports": ["IP:"],
+        "inputs": ["HDMI In"],
         "outputs": [
             "DP Out",
+            "HDMI Out",
         ],
         "control": ["LAN", "USB-A"],
     },

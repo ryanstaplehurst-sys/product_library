@@ -61,7 +61,8 @@ DEVICES = [
         "subtitle": "Touch Monitor",
         "tags": ["Display", "Touch"],
         "width": 170,
-        "inputs": ["HDMI In", "VGA In"],
+        "inputs": ["HDMI In", "DisplayPort In", "USB-C (DP-Alt + Touch)", "VGA In"],
+        "outputs": ["Audio Out (3.5mm)"],
         "control": ["USB Touch"],
     },
 ]
