@@ -5,6 +5,14 @@ ON ORDER (purchase list, May 2026). Port layouts verified against disguise
 spec sheets, June 2026:
     - EX 3+  — 2U RenderStream render node (RTX 4000 Ada)
     - GX 2c  — 4U generative/Notch server, 2x VFC output slots
+
+SUB-HIRE (not in Current RMS stock), added November 2026. Port layouts from
+disguise's published specs (help.disguise.one GX 3 specifications page;
+VX 4+ product page and spec sheet). No datasheet for either is in the
+Drive whitepaper archive yet:
+    - GX 3   — 4U generative/Notch server, 3x VFC output slots
+    - VX 4+  — 4U playback/compositing server, 4x VFC output slots
+Network port letters (A-E) follow disguise's VX rear-panel labelling.
 """
 
 from pathlib import Path
@@ -70,6 +78,73 @@ DEVICES = [
             "GbE (d3Net)",
             "GbE (Art-Net)",
             "10GbE Media x2",
+            "USB 3.0 x5",
+        ],
+    },
+    {
+        "title": "GX 3",
+        "name": "disguise GX 3",
+        "subtitle": "Generative Media Server",
+        "tags": ["Video", "Media Server", "Sub-hire"],
+        "width": 190,
+        "info_row": True,
+        "loose_ports": ["IP:", "Genlock In (BNC)"],
+        "inputs": [
+            "SDI Capture (3x12G / 12x3G HD-BNC)",
+            "Audio In L/R (XLR)",
+            "Analogue In (1/4\" jack)",
+            "MIDI In",
+        ],
+        "outputs": [
+            "VFC Slot 1 (HDMI 2.0)",
+            "VFC Slot 2 (HDMI 2.0)",
+            "VFC Slot 3 (HDMI 2.0)",
+            "DP 1.4 GUI",
+            "Audio Out L/R (XLR)",
+            "MIDI Out",
+        ],
+        "control": [
+            "1GbE A",
+            "10GbE B",
+            "10GbE C",
+            "100G QSFP28 D",
+            "100G QSFP28 E",
+            "Mgmt Ethernet",
+            "USB 3.0 x5",
+        ],
+    },
+    {
+        "title": "VX 4+",
+        "name": "disguise VX 4+",
+        "subtitle": "Playback & Compositing Server",
+        "tags": ["Video", "Media Server", "Sub-hire"],
+        "width": 190,
+        "info_row": True,
+        "loose_ports": ["IP:", "Genlock In (BNC)"],
+        "inputs": [
+            "SDI Capture (4x12G / 16x3G HD-BNC)",
+            "Audio In L/R (XLR)",
+            "Analogue In (1/4\" jack)",
+            "ADAT/SPDIF In",
+            "MIDI In",
+        ],
+        "outputs": [
+            "VFC Slot 1 (HDMI 2.0)",
+            "VFC Slot 2 (HDMI 2.0)",
+            "VFC Slot 3 (HDMI 2.0)",
+            "VFC Slot 4 (HDMI 2.0)",
+            "DP 1.4 GUI",
+            "Audio Out L/R (XLR)",
+            "ADAT/SPDIF Out",
+            "MIDI Out",
+        ],
+        "control": [
+            "1GbE A",
+            "10GbE B",
+            "10GbE C",
+            "100G QSFP28 D",
+            "100G QSFP28 E",
+            "Mgmt Ethernet",
             "USB 3.0 x5",
         ],
     },

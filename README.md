@@ -2,7 +2,7 @@
 
 A curated set of draw.io shape libraries for the AV equipment Insert Productions actually rents, plus a Python toolkit that lets Claude compose `.drawio` signal-flow diagrams from free-form briefs.
 
-**30 libraries · ~328 device shapes · synced to Current RMS, accuracy-verified against manufacturer specs, June 2026.**
+**30 libraries · ~329 device shapes · synced to Current RMS, accuracy-verified against manufacturer specs, June 2026.**
 
 See [`coverage_status.md`](coverage_status.md) for the up-to-date inventory.
 
@@ -121,4 +121,4 @@ Cables, adapters, power, brackets, mounts, stands, packaging, ladders, batteries
 
 ## Licence
 
-Internal Insert Productions tool. Device specs are derived from manufacturer-published port lists; if you redistribute, check trademark guida
+Internal Insert Productions tool. Device specs are derived from manufacturer-published port lists; if you redistribute, check trademark guida

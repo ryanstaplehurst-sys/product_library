@@ -4,7 +4,7 @@ Tracking against the live Current RMS product catalogue. Last full stock sync: *
 
 ## Status: synced to Current RMS + accuracy-verified, June 2026
 
-**30 libraries / ~328 device shapes** (+ 18 cable styles). Every shape fact-checked against manufacturer specs 12 June 2026; purchase-list kit pre-built and tagged "On Order".
+**30 libraries / ~329 device shapes** (+ 18 cable styles). Every shape fact-checked against manufacturer specs 12 June 2026; purchase-list kit pre-built and tagged "On Order".
 
 June 2026 sync added ~75 shapes: two new libraries (`projectors.xml`, `roland.xml`), legacy serialised kit that never appeared in the income report (Yamaha CL5/QL5/LS9/M7CL + RIOs, Midas M32, d&b Q/B/C-series, Shure ULX-D/Axient/UHF-R, Barco E2 Jr/EC-30/EC-50/PDS902, Extron, Lightware, Teradek Bolt), and new stock since April (Shure SM7B, Netgear M4250, Mio Mix 104, Fischer IEM BP, Cyclone 4K, BrightSign HD224, ScreenBeam 1100+, HDBaseT 4KEX70-L, KVMs, Kramer VIA Connect², DJI Osmo Pocket 3, Asus NUC13, ASUS TUF A15, Beetronics 22" touch, Philips 27", BMD Cleanswitch 12x12 / Sync Generator / ATEM Mini Extreme ISO, DrayTek AP 960C, Unilumin uPad IV, and more).
 
@@ -23,6 +23,12 @@ Pre-built shapes for kit on the purchase list, tagged "On Order" in draw.io. Por
 - `blackmagic.xml` — **Videohub 10x10 12G** (10x10 12G-SDI, ref in/loop)
 
 Already covered from the same list: DM3, RIO1608-D3, EW-DX kit, ADP-UHF, SM58/57, PC Balance Box, DPA 6066, Samsung 50-85", LEDskin 1.9, Barco E2, Coex MX30/MX40 (MX40 Pro shape retained for this reason), IIYAMA 49/55 touch, M4250-10G2F, TP-Link router (variant). Out of scope: Astera/Avolites/Luminex/Chauvet (lighting), cables, stands, staging, power distro, APC UPS.
+
+## Sub-hire kit (not in Current RMS stock)
+
+Shapes for kit Insert cross-hires in, tagged "Sub-hire". Added 18 November 2026 from disguise's published specs (no datasheet in the Drive whitepaper archive yet):
+
+- `disguise.xml` — **disguise GX 3** (3x VFC slots shipping HDMI 2.0 + DP 1.4 GUI; 3x12G/12x3G HD-BNC capture; 1GbE + 2x10GbE + 2x100G QSFP28) and **VX 4+** (4x VFC slots shipping HDMI 2.0 + DP 1.4 GUI; 4x12G/16x3G HD-BNC capture; ADAT/SPDIF; 1GbE + 2x10GbE + 2x100G QSFP28)
 
 ## Retired kit (kept for sub-rent diagrams)
 
@@ -81,4 +87,4 @@ Legacy LG/NEC/Panasonic displays (43-98") — port-identical to the Samsung size
 - Lighting (64+ products) is a separate domain — different convention (DMX universes, hot patches, rigging plots) — left for a future skill.
 - Computers get minimal chassis — generally TB/HDMI outs + ethernet + USB. Model variants don't change port layout meaningfully, but each is a separate library tile so techs can find it by GPU/CPU label.
 - `audio-other.xml` and similar grouped files exist to keep the picker tidy — single-device-per-vendor entries collapsed into thematic libraries.
-- `blackmagic.xml` has no `sources/` generator (community import). The three June 2026 additions were appended to the XML directly; if a `sources/blackmagic.py` is ever created it must include them.
+- `blackmagic.xml` has no `sources/` generator (community import). The three June 2026 additions were appended to the XML directly; if a `sources/blackmagic.py` is ever created it must include them. Tidy-up 18 November 2026: titled the untitled URSA 4K tile (`ursa 4k`), removed an untitled exact duplicate of `bidi 3g`, and cleaned seven chassis labels (stray `&nbsp;`, inline span styling, SmartView name/size swapped).
